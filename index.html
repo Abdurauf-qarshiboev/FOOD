@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FooD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+          },
+          screens: {
+            'lg': { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
+
+            'md': { max: "768px" },
+            // => @media (max-width: 768px) { ... }
+
+            'sm': { max: "425px" },
+            // => @media (max-width: 425px) { ... }
+
+            'xs': { max: "375px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            colors: {
+              cpink: "#EB8E78",
+              creddish:"#EA684A",
+              cgold: "#F6B76C",
+              cgray: "#333333",
+              cmilk: "#FFE9CF",
+              choverg: "#043A0B",
+              clightgreen: "#AFD3AA",
+              ccardgray: "#F7F7F7",
+              cgreen: "#5EAE53",
+              corange: "#F49B3F",
+              cnumgreen:"#5EAE53",
+            },
+            opacity: {
+                '4956': '0.4956',
+                '5013': '0.5013',
+                '5016': '0.5016',
+                '503': '0.503',
+                '1961': '0.1961',
+            },
+            boxShadow: {
+                'pc-shadow': '10px 20px 40px 0 rgba(97, 49, 0, 0.2)',
+                'imgs-shadow': '7px 57px 40px 0 rgba(97, 49, 0, 0.198)',
+                'loc-shadow': '5px 10px 30px 0 rgba(97, 49, 0, 0.15)',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="dmsans-regular">
+    <div class="overflow-hidden w-full h-[880px] relative lg:h-[744px] md:h-[558px]">
+        <div class="absolute top-0 left-0 w-full h-full bg-image z-0" style="background-image: url('./images/Background.png')"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-image z-1" style="background-image: url('./images/Group\ 6.png');"></div>
+      <section class="pt-4 pb-12 w-full relative h-full">
+        <!-- header -->
+        <header class="ccontainer bg-cover flex items-center relative z-99 lg:w-[980px] md:w-[734px]">
+          <div class="worksans-bold text-white text-[40px] leading-[48px]">
+            <a href="#">FooD</a>
+          </div>
+          <nav
+            class="text-white leading-8 text-base flex items-center gap-[60px] ml-[287px] lg:ml-auto md:gap-[30px]"
+          >
+            <a
+              href="#"
+              class="transition duration-300 ease-in-out hover:scale-125 hover:underline md-hover:scale-105"
+              >About</a
+            >
+            <a
+              href="#"
+              class="transition duration-300 ease-in-out hover:scale-125 hover:underline  md-hover:scale-105"
+              >Restaurants</a
+            >
+            <a
+              href="#"
+              class="transition duration-300 ease-in-out hover:scale-125 hover:underline  md-hover:scale-105"
+              >Map</a
+            >
+            <a
+              href="#"
+              class="transition duration-300 ease-in-out hover:scale-125 hover:underline  md-hover:scale-105"
+              >Submit</a
+            >
+          </nav>
+          <button
+            class="dmsans-bold text-base text-white py-[14px] px-[56px] md:p-4  rounded-xl border-[1px] border-white border-opacity-30 mr-4 ml-auto transition duration-300 ease-in-out hover:scale-105 hover:border-choverg hover:text-choverg"
+          >
+            Sign Up
+          </button>
+          <a
+            href="#"
+            class="py-[14px] px-[12px] rounded-full bg-cpink flex items-center justify-center w-12 h-12 hover:bg-red-400 hover:ring-[1px] hover:ring-red-500 transition duration-200 ease-in-out hover:scale-110"
+          >
+            <img src="./images/korzinka.svg" alt="" class="" />
+          </a>
+        </header>
+        <!-- main page content -->
+        <main class="ccontainer flex gap-18 z-99 lg:w-[980px] md:w-[734px] md:flex-col ">
+          <div class="flex flex-col flex-1 relative z-99 md:items-center">
+            <!-- best food in town -->
+            <div
+              class="caveat-regular text-cgold text-[50px] leading-[63px] mt-[129px] md:mt-[55px] md:text-[45px]"
+            >
+              Best food in town.
+            
+            </div>
+            <!-- delivery of food -->
+            <div
+              class="worksans-bold text-white text-7xl leading-[80px] mt-[15px] lg:text-5xl lg:mt-6 lg:text-[41px] md:text-center"
+            >
+              Delivery Food from the Best Restaurants.
+            </div>
+            <!-- search -->
+            <form
+              class="rounded-xl bg-white flex items-center w-[470px] ring-[2px] ring-white mt-12 lg:w-[400px] lg:mt-[5rem] md:items-center"
+            >
+              <input
+                type="text"
+                class="w-full h-full bg-white text-cgray text-opacity-5016 text-base flex-1 rounded-[12px] focus:outline-none pl-4 placeholder-cgray placeholder-opacity-5016"
+                placeholder="Food and Restaurants…"
+              />
+              <button
+                class="py-[13px] px-[31px] text-white bg-creddish rounded-[12px] ml-auto dmsans-bold text-base hover:bg-red-400 hover:ring-[1px] hover:ring-red-500 transition duration-200 ease-in-out "
+              >
+                Search
+              </button>
+            </form>
+            <!-- socials -->
+            <div class="flex gap-2 mt-44 lg:mt-auto md:mt-10">
+              <a
+                href="#"
+                class="flex items-center justify-center bg-cpink rounded-full w-12 h-12 hover:bg-red-400 hover:ring-[1px] hover:ring-red-500 transition duration-200 ease-in-out hover:scale-110"
+                ><img src="./images/facebook.svg" alt=""
+              /></a>
+              <a
+                href="#"
+                class="flex items-center justify-center bg-cpink rounded-full w-12 h-12 hover:bg-red-400 hover:ring-[1px] hover:ring-red-500 transition duration-200 ease-in-out hover:scale-110"
+                ><img src="./images/twitter.svg" alt=""
+              /></a>
+              <a
+                href="#"
+                class="flex items-center justify-center bg-cpink rounded-full w-12 h-12 hover:bg-red-400 hover:ring-[1px] hover:ring-red-500 transition duration-200 ease-in-out hover:scale-110"
+                ><img src="./images/instagram.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <!-- right side banner image -->
+          <div class="w-[602px] h-[608px] mt-[92px] relative z-99 lg:scale-75 lg:mt-5 lg:-mr-[70px] md:hidden">
+            <img
+              src="./images/dots.png"
+              alt=""
+              class="absolute left-[51px] top-[16.69px] z-0"
+            />
+            <img
+              src="./images/dots.png"
+              alt=""
+              class="absolute left-[51px] top-[79.53px] z-0"
+            />
+            <img
+              src="./images/food1.png"
+              alt=""
+              class="rounded-xl absolute top-0 right-0 z-20 shadow-imgs-shadow"
+            />
+            <img
+              src="./images/foodcenter.png"
+              alt=""
+              class="absolute top-[62.84px] left-[131px] rounded-xl z-10 shadow-imgs-shadow"
+            />
+            <img
+              src="./images/food2.png"
+              alt=""
+              class="absolute left-0 bottom-0 rounded-xl z-0 shadow-imgs-shadow"
+            />
+            <img
+              src="./images/dots.png"
+              alt=""
+              class="absolute bottom-[178.71px] right-[52px] rounded-xl z-20"
+            />
+            <a
+              href="#"
+              class="rounded-full bg-cmilk block py-[34px] px-[42px] w-[121px] h-[119px] absolute bottom-[51px] right-[39px] z-20 shadow-imgs-shadow hover:bg-amber-100 hover:scale-105 transition duration-200 ease-in-out"
+            >
+              <img src="./images/loc.svg" alt="" />
+            </a>
+          </div>
+        </main>
+      </section>
+    </div>
+
+    <!-- popular categories -->
+
+    <section class="ccontainer lg:w-[980px] md:w-[734px]">
+        <div class="flex justify-center">
+            <div
+                class="leading-8 text-sm text-white px-[15px] bg-cgreen block rounded-lg mt-[75px] mb-[18px] uppercase">categories
+            </div>
+        </div>
+        <h1 class="worksans-bold text-[56px] leading-[64px] text-cgray mb-[51px] text-center md:text-[40px]">
+        Popular Categories
+        </h1>
+        <div class="mb-[123px] lg:mb-20 md:w-[734px] md:overflow-auto md:pb-4">
+          <div class="flex gap-[30px] w-[1000px]">
+                  <!-- Food cards go gere -->
+                  <div
+                  class="flex flex-col w-[170px] md:w-[140px] items-center bg-ccardgray rounded-xl text-white pt-8 pb-[25px] group transition duration-300 ease-in-out hover:rounded-[24px] hover:shadow-pc-shadow hover:ring hover:ring-corange hover:ring-8 hover:border-0 hover:bg-corange cursor-pointer">
+                  <div
+                      class="flex items-center justify-center rounded-full bg-white size-[112px] relative">
+                      <img src="./images/pizza.svg" alt="" />
+                      <span
+                      class="flex items-center justify-center size-10 rounded-full bg-clightgreen absolute top-0 -right-[8px] border-0 text-white text-base leading-8 group-hover:bg-cnumgreen ">
+                      42
+                      </span>
+                  </div>
+                  <div class="text-cgray text-xl leading-8 mt-[17px] group-hover:text-white ">Pizza</div>
+                  <div class="text-cgray text-sm text-opacity-5013  group-hover:text-white group-hover:text-opacity-4956">From $4</div>
+                  </div>
+          
+                  <div
+                  class="flex flex-col w-[170px] md:w-[140px] items-center bg-ccardgray rounded-xl text-white pt-8 pb-[25px] group transition duration-300 ease-in-out hover:rounded-[24px] hover:shadow-pc-shadow hover:ring hover:ring-corange hover:ring-8 hover:bg-corange  cursor-pointer">
+                  <div
+                      class="flex items-center justify-center rounded-full bg-white size-[112px] relative">
+                      <img src="./images/sushi.svg" alt="" />
+                      <span
+                      class="flex items-center justify-center size-10 rounded-full bg-clightgreen absolute top-0 -right-[8px] border-0 text-white text-base leading-8 group-hover:bg-cnumgreen ">
+                      35
+                      </span>
+                  </div>
+                  <div class="text-cgray text-xl leading-8 mt-[17px] group-hover:text-white ">Sushi</div>
+                  <div class="text-cgray text-sm text-opacity-5013  group-hover:text-white group-hover:text-opacity-4956">From $4</div>
+                  </div>
+          
+                  <div
+                  class="flex flex-col w-[170px] md:w-[140px] items-center bg-ccardgray rounded-xl text-white pt-8 pb-[25px] group transition duration-300 ease-in-out hover:rounded-[24px] hover:shadow-pc-shadow hover:ring hover:ring-corange hover:ring-8 hover:bg-corange cursor-pointer">
+                  <div
+                      class="flex items-center justify-center rounded-full bg-white size-[112px] relative">
+                      <img src="./images/hamburger.svg" alt="" />
+                      <span
+                      class="flex items-center justify-center size-10 rounded-full bg-clightgreen absolute top-0 -right-[8px] border-0 text-white text-base leading-8 group-hover:bg-cnumgreen ">
+                      28
+                      </span>
+                  </div>
+                  <div class="text-cgray text-xl leading-8 mt-[17px] group-hover:text-white ">Burgers</div>
+                  <div class="text-cgray text-sm text-opacity-5013  group-hover:text-white group-hover:text-opacity-4956">From $4</div>
+                  </div>
+          
+                  <div
+                  class="flex flex-col w-[170px] md:w-[140px] items-center bg-ccardgray rounded-xl text-white pt-8 pb-[25px] group transition duration-300 ease-in-out hover:rounded-[24px] hover:shadow-pc-shadow hover:ring hover:ring-corange hover:ring-8 hover:bg-corange cursor-pointer">
+                  <div
+                      class="flex items-center justify-center rounded-full bg-white size-[112px] relative">
+                      <img src="./images/watermelon.svg" alt="" />
+                      <span
+                      class="flex items-center justify-center size-10 rounded-full bg-clightgreen absolute top-0 -right-[8px] border-0 text-white text-base leading-8 group-hover:bg-cnumgreen ">
+                      23
+                      </span>
+                  </div>
+                  <div class="text-cgray text-xl leading-8 mt-[17px] group-hover:text-white ">Vegetarian</div>
+                  <div class="text-cgray text-sm text-opacity-5013  group-hover:text-white group-hover:text-opacity-4956">From $4</div>
+                  </div>
+          
+                  <div
+                  class="flex flex-col w-[170px] md:w-[140px] items-center bg-ccardgray rounded-xl text-white pt-8 pb-[25px] group transition duration-300 ease-in-out hover:rounded-[24px] hover:shadow-pc-shadow hover:ring hover:ring-corange hover:ring-8 hover:bg-corange cursor-pointer">
+                  <div
+                      class="flex items-center justify-center rounded-full bg-white size-[112px] relative">
+                      <img src="./images/noodle.svg" alt="" />
+                      <span
+                      class="flex items-center justify-center size-10 rounded-full bg-clightgreen absolute top-0 -right-[8px] border-0 text-white text-base leading-8 group-hover:bg-cnumgreen ">
+                      15
+                      </span>
+                  </div>
+                  <div class="text-cgray text-xl leading-8 mt-[17px] group-hover:text-white ">Asian</div>
+                  <div class="text-cgray text-sm text-opacity-5013  group-hover:text-white group-hover:text-opacity-4956">From $4</div>
+                  </div>
+          
+                  <div
+                  class="flex flex-col w-[170px] md:w-[140px] items-center bg-ccardgray rounded-xl text-white pt-8 pb-[25px] group transition duration-300 ease-in-out hover:rounded-[24px] hover:shadow-pc-shadow hover:ring hover:ring-corange hover:ring-8 hover:bg-corange cursor-pointer">
+                  <div
+                      class="flex items-center justify-center rounded-full bg-white size-[112px] relative">
+                      <img src="./images/cake.svg" alt="" />
+                      <span
+                      class="flex items-center justify-center size-10 rounded-full bg-clightgreen absolute top-0 -right-[8px] border-0 text-white text-base leading-8 group-hover:bg-cnumgreen ">
+                      9
+                      </span>
+                  </div>
+                  <div class="text-cgray text-xl leading-8 mt-[17px] group-hover:text-white ">Bakery</div>
+                  <div class="text-cgray text-sm text-opacity-5013  group-hover:text-white group-hover:text-opacity-4956">From $4</div>
+          
+                  </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- restaurants goes here-->
+
+    <section class="ccontainer lg:w-[980px] md:w-[734px]">
+        <div class="flex justify-start">
+            <div
+                class="leading-8 text-sm text-white px-[15px] bg-cgreen block rounded-lg mb-[18px] uppercase">restaurants
+            </div>
+        </div>
+        <h1 class="worksans-bold text-[56px] md:text-[40px] leading-[64px] text-cgray mb-[14px] text-left">
+        Restaurants
+        </h1>
+        <div class="flex items-center text-base leading-8 text-cgray  mb-[37px]">
+            <div class="opacity-5016">Best for active freelancers and designers who need more projects and premium features.</div>
+            <a href="#" class="block ml-auto transition duration-300 ease-in-out hover:scale-110 hover:text-cgreen">View All</a>
+        </div>
+        <div class="flex mb-[87px] gap-[30px] lg:overflow-auto lg:pb-4 lg:mb-[84px]">
+            <a href="#" class="block">
+                <div class="flex flex-col basis-1/4 rounded-xl bg-ccardgray overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[270px] l">
+                    <div class="relative ">
+                        <img src="./images/bestburgers.jpg" alt="" class="w-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">9.8</div>
+                        </div>
+                    </div>
+                    <div class="pt-6 pl-6 pr-6 pb-[21px] w-full inline-block lg:p-4">
+                        <p class="worksans-bold text-left leading-8 text-2xl text-cgray group-hover:text-cgreen">Best Burgers</p>
+                        <div class=" flex text-base text-cgray leading-8 mt-[3px] group-hover:text-cgreen">
+                            <p class="text-left">20-30 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">Burgers</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block">
+                <div class="flex flex-col basis-1/4 bg-ccardgray rounded-xl overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[270px] ">
+                    <div class="relative ">
+                        <img src="./images/rosecafe.jpg" alt="" class=" w-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">8.5</div>
+                        </div>
+                    </div>
+                    <div class="pt-6 pl-6 pr-6 pb-[21px] w-full inline-block lg:p-4">
+                        <p class="worksans-bold text-left leading-8 text-2xl text-cgray group-hover:text-cgreen">Rosa Cafe</p>
+                        <div class=" flex text-base text-cgray leading-8 mt-[3px] group-hover:text-cgreen">
+                            <p class="text-left">~45 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">Pizza</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block">
+                <div class="flex flex-col basis-1/4 bg-ccardgray rounded-xl overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[270px] ">
+                    <div class="relative  ">
+                        <img src="./images/redwood.jpg" alt="" class=" w-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">7.3</div>
+                        </div>
+                    </div>
+                    <div class="pt-6 pl-6 pr-6 pb-[21px] w-full inline-block lg:p-4">
+                        <p class="worksans-bold text-left leading-8 text-2xl text-cgray group-hover:text-cgreen">RedWood</p>
+                        <div class=" flex text-base text-cgray leading-8 mt-[3px] group-hover:text-cgreen">
+                            <p class="text-left">15-20 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">Sushi</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block">
+                <div class=" flex-col basis-1/4 rounded-xl bg-ccardgray overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] cursor-pointer w-[270px] ">
+                        <div class="relative ">
+                            <img src="./images/grant.jpg" alt="" class=" w-full">
+                            <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                                <img src="./images/star.svg" alt="" class="inline block">
+                                <div class="text-white text-xl leading-8 inline-block">8.0</div>
+                            </div>
+                        </div>
+                    <div class="pt-6 pl-6 pr-6 pb-[21px] w-full inline-block lg:p-4">
+                        <p class="worksans-bold text-left leading-8 text-2xl text-cgray group-hover:text-cgreen">Grand Restaurant</p>
+                        <div class=" flex text-base text-cgray leading-8 mt-[3px] group-hover:text-cgreen">
+                            <p class="text-left">~50 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">Vegetarian</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- best details goes here -->
+
+    <section class="ccontainer lg:w-[980px] md:w-[734px]">
+        <div class="flex justify-start">
+            <div
+                class="leading-8 text-sm  text-white px-[15px] bg-cgreen block rounded-lg mb-[18px] uppercase">Best Deals
+            </div>
+        </div>
+        <h1 class="worksans-bold text-[56px] md:text-[40px] leading-[64px] text-cgray mb-[14px] text-left">
+        Best Deals
+        </h1>
+        <div class="flex items-center text-base leading-8 text-cgray  mb-[37px]">
+            <div class="opacity-5016 ">Best for active freelancers and designers who need more projects and premium features.</div>
+            <a href="#" class="block ml-auto transition duration-300 ease-in-out hover:scale-110 hover:text-cgreen">View All</a>
+        </div>
+
+        <div class="flex flex-wrap mb-[150px] gap-[30px] lg:justify-center lg:mb-[100px]">
+            <a href="#" class="block lg:w-10/12 md:w-11/12">
+                <div class="flex basis-1/2 rounded-xl bg-ccardgray overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[570px] lg:w-full lg:overflow-hidden">
+                    <div class="relative lg:w-1/2">
+                        <img src="./images/1.jpg" alt="" class="w-270px lg:w-full md:h-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">9.8</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 pt-[25px] pl-[30px] pr-6 pb-[21px] inline-block text-left leading-8 text-cgray lg:pt-[50px]">
+                        <div class=" text-xl group-hover:text-corange mb-[15px] leading-8 lg:text-2xl">Burgers</div>
+                        <div class="worksans-bold text-2xl group-hover:text-cgreen mb-[3px] lg:text-4xl lg:mb-4 md:text-[2.05rem]">Best Burgers</div>
+                        <div class="text-base opacity-5016 mb-4 leading-8 lg:text-lg lg:mb-6">42 Jong Panchester St, 9073</div>
+                        <div class=" flex text-base group-hover:text-cgreen leading-8 lg:text-xl">
+                            <p class="text-left">20-30 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">From $4</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block lg:w-10/12 md:w-11/12">
+                <div class="flex basis-1/2 rounded-xl bg-ccardgray overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[570px] lg:w-full lg:overflow-hidden">
+                    <div class="relative lg:w-1/2">
+                        <img src="./images/4.jpg" alt="" class="w-270px lg:w-full md:h-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">9.8</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 pt-[25px] pl-[30px] pr-6 pb-[21px] inline-block text-left leading-8 text-cgray lg:pt-[50px]">
+                        <div class=" text-xl group-hover:text-corange mb-[15px] leading-8 lg:text-2xl">Pizza</div>
+                        <div class="worksans-bold text-2xl group-hover:text-cgreen mb-[3px] lg:text-4xl lg:mb-4 md:text-[2.05rem]">Piza Masters</div>
+                        <div class="text-base opacity-5016 mb-4 leading-8 lg:mb-6">Ac St. Schaumburg 84872</div>
+                        <div class=" flex text-base group-hover:text-cgreen leading-8 lg:text-xl">
+                            <p class="text-left">~45 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">From $4</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block lg:w-10/12 md:w-11/12">
+                <div class="flex basis-1/2 rounded-xl bg-ccardgray overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[570px] lg:w-full lg:overflow-hidden">
+                    <div class="relative lg:w-1/2">
+                        <img src="./images/2.jpg" alt="" class="w-270px lg:w-full md:h-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">9.8</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 pt-[25px] pl-[30px] pr-6 pb-[21px] inline-block text-left leading-8 text-cgray lg:pt-[50px]">
+                        <div class=" text-xl group-hover:text-corange mb-[15px] leading-8 lg:text-2xl">Asian</div>
+                        <div class="worksans-bold text-2xl group-hover:text-cgreen mb-[3px] lg:text-4xl lg:mb-4 md:text-[2.05rem]">Luxury Restaurant</div>
+                        <div class="text-base opacity-5016 mb-4 leading-8 lg:mb-6">Kennewick AL 41329</div>
+                        <div class=" flex text-base group-hover:text-cgreen leading-8 lg:text-xl">
+                            <p class="text-left">15-20 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">From $4</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block lg:w-10/12 md:w-11/12">
+                <div class="flex basis-1/2 rounded-xl bg-ccardgray overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[570px] lg:w-full lg:overflow-hidden">
+                    <div class="relative lg:w-1/2">
+                        <img src="./images/5.jpg" alt="" class="w-270px lg:w-full md:h-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">9.8</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 pt-[25px] pl-[30px] pr-6 pb-[21px] inline-block text-left leading-8 text-cgray lg:pt-[50px]">
+                        <div class=" text-xl group-hover:text-corange mb-[15px] leading-8 lg:text-2xl">Sushi</div>
+                        <div class="worksans-bold text-2xl group-hover:text-cgreen mb-[3px] lg:text-4xl lg:mb-4 md:text-[2.05rem]">Italian Cuisine</div>
+                        <div class="text-base opacity-5016 mb-4 leading-8 lg:mb-6">8019 Facilisis Street</div>
+                        <div class=" flex text-base group-hover:text-cgreen leading-8 lg:text-xl">
+                            <p class="text-left">30-40 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">From $4</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block lg:w-10/12 md:w-11/12">
+                <div class="flex basis-1/2 rounded-xl bg-ccardgray overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[570px] lg:w-full lg:overflow-hidden">
+                    <div class="relative lg:w-1/2">
+                        <img src="./images/3.jpg" alt="" class="w-270px lg:w-full md:h-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">9.8</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 pt-[25px] pl-[30px] pr-6 pb-[21px] inline-block text-left leading-8 text-cgray lg:pt-[50px]">
+                        <div class=" text-xl group-hover:text-corange mb-[15px] leading-8 lg:text-2xl">Bakery</div>
+                        <div class="worksans-bold text-2xl group-hover:text-cgreen mb-[3px] lg:text-4xl lg:mb-4 md:text-[2.05rem]">Elegant Cafe</div>
+                        <div class="text-base opacity-5016 mb-4 leading-8 lg:mb-6">8441 Eleifend Street</div>
+                        <div class=" flex text-base group-hover:text-cgreen leading-8 lg:text-xl">
+                            <p class="text-left">~20 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">From $4</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="block lg:w-10/12 md:w-11/12">
+                <div class="flex basis-1/2 rounded-xl bg-ccardgray overflow-hidden group transition duration-300 ease-in-out hover:shadow-[0_0_11px_rgba(33,33,33,0.2)] w-[570px] lg:w-full lg:overflow-hidden">
+                    <div class="relative lg:w-1/2">
+                        <img src="./images/6.jpg" alt="" class="w-270px lg:w-full md:h-full">
+                        <div class="flex gap-[9px] py-2 pl-[9px] pr-4 items-center absolute top-4 left-4 bg-cpink rounded-lg">
+                            <img src="./images/star.svg" alt="" class="inline block">
+                            <div class="text-white text-xl leading-8 inline-block">9.8</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 pt-[25px] pl-[30px] pr-6 pb-[21px] inline-block text-left leading-8 text-cgray lg:pt-[50px]">
+                        <div class=" text-xl group-hover:text-corange mb-[15px] leading-8 lg:text-2xl">Pizza</div>
+                        <div class="worksans-bold text-2xl group-hover:text-cgreen mb-[3px] lg:text-4xl lg:mb-4 md:text-[2.05rem]">Cafe & Bakery</div>
+                        <div class="text-base opacity-5016 mb-4 leading-8 lg:mb-6">9631 Semper Ave Astoria</div>
+                        <div class=" flex text-base group-hover:text-cgreen leading-8 lg:text-xl">
+                            <p class="text-left">10-20 min</p>
+                            <span class="ml-auto opacity-5016 group-hover:text-corange">From $4</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- footer goes here -->
+
+    <footer class="bg-cgray divide-y divide-opacity-20 divide-white">
+      <div class="ccontainer pt-[58px] pb-[68px] flex lg:w-[980px] md:w-[734px]">
+        <div class="mr-[240px] md:mr-auto">
+          <div class="worksans-bold text-white text-[40px] leading-[48px]">
+            <a href="#">FooD</a>
+          </div>
+          <div class="flex gap-2 mt-[38px]">
+            <a
+              href="#"
+              class="flex items-center justify-center bg-cpink rounded-full w-12 h-12 hover:bg-red-400 hover:ring-[1px] hover:ring-red-500 transition duration-200 ease-in-out hover:scale-110"
+              ><img src="./images/facebook.svg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="flex items-center justify-center bg-cpink rounded-full w-12 h-12 hover:bg-red-400 hover:ring-[1px] hover:ring-red-500 transition duration-200 ease-in-out hover:scale-110"
+              ><img src="./images/twitter.svg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="flex items-center justify-center bg-cpink rounded-full w-12 h-12 hover:bg-red-400 hover:ring-[1px] hover:ring-red-500 transition duration-200 ease-in-out hover:scale-110"
+              ><img src="./images/instagram.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="text-white mt-[17px]">
+          <div class="flex">
+            <div
+              class="leading-8 text-sm uppercase"
+              >Menu</div
+            >
+          </div>
+          <div class="flex text-base mt-[32px]">
+            <div class="flex flex-col mr-[112px] md:mr-[45px]">
+              <a
+                href="#"
+                class="leading-8 hover:underline"
+                >About</a
+              >
+              <a
+                href="#"
+                class="leading-8 hover:underline"
+                >Restaurants</a
+              >
+            </div>
+            <div class="flex flex-col">
+              <a
+                href="#"
+                class="leading-8 hover:underline"
+                >Map</a
+              >
+              <a
+                href="#"
+                class="leading-8 hover:underline"
+                >Submit</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="ml-auto mt-[17px]">
+          <div class="leading-8 text-white text-sm uppercase">Subscribe</div>
+          <form
+            action="submit"
+            class="flex items-center justify-between py-2 pl-4 pr-3 gap-4 bg-white rounded-xl mt-[37px]"
+          >
+            <input
+              type="email"
+              class="text-cgray text-base text-opacity-5016 leading-8 focus:outline-0 placeholder-cgray placeholder-opacity-5016"
+              placeholder="Your email"
+            />
+            <button class="transition duration-200 ease-in-out hover:scale-110">
+              <img src="./images/send.svg" alt="" />
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="ccontainer pt-[43px] pb-[37px] flex items-center justify-between lg:w-[980px] md:w-[734px]"
+      >
+        <div class="flex gap-4 mt-auto">
+          <a
+            href="#"
+            class="transition duration-200 ease-in-out hover:scale-110"
+            ><img src="./images/cc-visa.svg" alt=""
+          /></a>
+          <a
+            href="#"
+            class="transition duration-200 ease-in-out hover:scale-110"
+            ><img src="./images/cc-mastercard.svg" alt=""
+          /></a>
+          <a
+            href="#"
+            class="transition duration-200 ease-in-out hover:scale-110"
+            ><img src="./images/cc-apple-pay.svg" alt=""
+          /></a>
+        </div>
+        <div class="flex text-white gap-11">
+          <a
+            href="#"
+            class="leading-8 hover:underline"
+            >Terms and conditions</a
+          >
+          <a
+            href="#"
+            class="leading-8 hover:underline"
+            >Privacy</a
+          >
+          <div class="leading-8 opacity-503">© 2019 FooD. Laaqiq</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
